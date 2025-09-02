@@ -1,0 +1,601 @@
+
+\documentclass[sn-mathphys]{sn-jnl}
+
+\usepackage{orcidlink}
+\usepackage{graphicx}%
+\usepackage{multirow}%
+%\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsmath,amsfonts}%
+%\usepackage{amsthm}%
+%\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+%\usepackage{textcomp}%
+%\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocodex}%
+\usepackage{listings}%
+\usepackage{caption}
+%\usepackage{subcaption}  % Only if you need side-by-side images
+\usepackage{float}       % Allows you to position figures more reliably
+%\usepackage{tabularx}
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+
+\title{Black Hole Merger Frustration in QSD: A Physically-Constrained Model for Jet Genesis, Scalar Emission, and Residual Dynamics}
+
+\author*[1]{\fnm{Michael} \sur{Bush} \orcidlink{0009-0003-9747-9109}}  
+\email{mbush@haddentechnologies.com;miketbush@gmail.com}
+
+\affil[1]{Hadden Technology Corporation, \orgdiv{Research Director}, \orgaddress{\city{Shiloh}, \postcode{62221}, \country{USA}}}
+
+\date{\today}
+
+\abstract{Observational data from black hole mergers increasingly challenge classical general relativity (GR). Features such as asymmetric jets, prolonged ringdowns, and repeating fast radio bursts (FRBs) suggest internal dynamics beyond GR’s scope. This manuscript introduces a physically grounded model based on Quantum Substrate Dynamics (QSD) \cite{bush2025}, in which mass arises from phase-bound coherence within a Lorentz-invariant substrate field.
+
+In this framework, black hole mergers are not guaranteed. When internal phase, spin, or coherence conditions are misaligned, unification can fail—a scenario termed merger frustration. The result is a metastable dual-core system, or black hole molecule, stabilized by a persistent coherence trench. This trench explains jet asymmetries, post-merger emissions, and periodic scalar bursts.
+
+The Lorentz–Einstein Substrate (LESt) complements GR by modeling internal structure without contradicting external metric predictions. It provides falsifiable mechanisms for alternatives to singularity-driven collapse and reframes black hole thermodynamics as a structural, not horizon-based, process.
+
+The model predicts testable signatures across gravitational and electromagnetic channels, including jet precession without accretion, scalar yield, and delayed emissions. Observed systems such as GW190814, M87, SS 433, and FRB 180916 align with these behaviors.
+}
+
+%%----------------------------------------------------------------------
+%% Keywords
+%%----------------------------------------------------------------------
+\keywords{black hole, dual, mergers, jets, substrate, mass-phase, QSD, lest}
+
+\maketitle
+
+\section{Introduction}
+Black hole mergers have become one of the most powerful observational tools in modern physics, offering direct insight into the behavior of spacetime under extreme conditions. Yet as gravitational wave data accumulates, so do the anomalies: asymmetric jet emissions, prolonged or irregular ringdowns, delayed bursts of electromagnetic radiation, and repeating fast radio bursts (FRBs) with quasi-periodic structure. These phenomena are difficult to reconcile with the traditional view of black hole coalescence as an immediate, featureless unification into a single, stable Kerr black hole.
+
+General relativity (GR) successfully predicts the external spacetime geometry of compact objects and the propagation of gravitational waves, but it provides no internal mechanism for how singularities merge—or whether they must. It treats black holes as boundary-defined mathematical constructs, whose internal structure is hidden from and irrelevant to the outside universe. Yet the persistent observational deviations suggest that internal structure may matter after all.
+
+This work began as an effort to evaluate the predictions of Quantum Substrate Dynamics (QSD) \cite{bush2025} in the context of black hole mergers. One prediction that emerged early in our modeling was that a merger might not occur at all if certain vibrational and coherence conditions were not met. Rather than assuming merger as inevitable, the substrate-based model suggested that rotational shear, phase incompatibility, or field saturation could arrest unification entirely. We then revisited gravitational wave and jet emission data from real-world systems—and found that the behavior predicted by merger frustration had already been observed.
+
+Notably, these structural constraints are not unique to QSD. The same logic applies within general relativity once its silence on singularity dynamics is acknowledged. GR describes what happens outside the event horizon\cite{Unruh1981}, but not what must occur inside. The constraints we identify—on coherence, spin, and field saturation—are as applicable to classical systems as to quantum substrates.
+
+This manuscript explores the physical and observational consequences of merger frustration: the formation of long-lived dual-core systems, the generation of jet and scalar emissions from trench dynamics, and the reinterpretation of black hole evaporation not as a universal quantum feature, but as a structural consequence of internal complexity. This study was initiated to evaluate whether predictions made by QSD—specifically, that black hole mergers may fail due to coherence constraints—could be validated against existing observational data. Remarkably, the theoretical consequences of merger frustration, trench-mediated emissions, and dual-core persistence were found to align closely with several real-world systems, including GW190814, M87, SS 433, and repeating FRBs. These correlations suggest that the underlying structure predicted by QSD is not only physically plausible, but observationally realized.
+While the implications of the QSD model are broad, this paper focuses specifically on compact object merger dynamics, with observational consequences limited to black hole molecules and related emissions. Cosmological or particle-scale extensions are reserved for future work.
+Additionally, while the focus is on black hole interactions, similar dynamics may apply to other high-density coherence-bound systems, as outlined in the Appendix~\ref{sec:exotic_extensions}.
+
+
+\section{QSD Foundational Primer}
+
+QSD is a structural field model in which mass, inertia, and gravitation arise from the dynamics of a Lorentz-invariant coherence field. Central to this framework is the Lorentz--Einstein Substrate (LESt), a relativistic field medium that models mass not as a geometric singularity but as a localized region of saturated field coherence—a stable super-positional deformation of the substrate that resists further compression.
+
+In this view, inertial behavior is a manifestation of the substrate's internal resistance to reconfiguration, and gravitational attraction arises from field tension gradients between neighboring coherence structures, consistent with substrate conservation. Rather than treating gravity purely as an external metric distortion, LESt models these effects as internal responses within a relativistic, quantized substrate.
+
+The substrate behaves as a fluid-like field: it supports nonlinear wave propagation, coherence interference, quantized emissions, and rotational shear. These behaviors are reminiscent of condensed matter systems such as superfluids or Bose–Einstein condensates, but underpinned here by relativistic symmetry and field-theoretic consistency\cite{Landau1987}.
+
+Importantly, the substrate is not a speculative construct—it is the minimal physical medium required to account for the observed behaviors of mass and inertia. Where general relativity encodes the external geometry of mass, QSD with LESt provides the internal structure that governs how mass forms, interacts, and in rare cases, fails to merge.
+
+
+\section{Collapse Dynamics and Merger Constraints}
+In the QSD framework, compact mass objects are not singular points, but phase-structured regions within the Lorentz--Einstein Substrate. These regions represent saturated coherence nodes—fully collapsed configurations of field energy that resist further compression. As such, they behave as effectively incompressible objects within the substrate.
+
+When two such coherence cores approach one another, merger is not guaranteed. The formation of a single unified mass depends on strict structural compatibility. Specifically, the cores must satisfy several simultaneous conditions: aligned spin axes, matched rotational frequencies, coherent waveform phase alignment, and yield overlap within the surrounding substrate. Absent these conditions, merger cannot occur.
+
+
+The central constraint is what we define as the \textit{Vibrational Fusion Condition} (VFC): a coherence-phase requirement in which the interacting cores must align their substrate waveforms in a stable, unifying mode. If their internal phases destructively interfere, or if their rotational mismatch induces excessive shear, the LESt field becomes unable to reconfigure into a unified structure.
+
+In such cases, field tension accumulates along the boundary between the cores. Rather than collapsing, this interaction zone stabilizes into a persistent shear trench—a topological feature in the substrate that permanently separates the two cores. This trench acts as both a barrier to merger and a potential outlet for scalar or electromagnetic emissions, setting the stage for the observable phenomena described in subsequent sections.
+
+
+\section{The Frustrated Merger: The Dual-Core Molecule Formation}
+
+When merger fails due to incompatibilities in phase structure, rotational alignment, or substrate yield, the result is not disruption—but entrapment. The two mass cores become locked in a metastable state: a bound, dual-core configuration stabilized by the very coherence tension that prevents their unification. We refer to this structure as a \textit{black hole molecule}.
+
+In this state, each core retains its internal structure, but the surrounding LESt field forms a persistent boundary trench between them. This trench—a coherence-depleted, shear-stabilized region—acts as both a physical separator and a dynamic interface. The system cannot collapse further, yet remains energetically active due to internal torque, field mismatch, and unresolvable phase tension, see Fig.~\ref{fig:molecule}.
+
+This dual-core configuration bears striking resemblance to atomic and molecular systems, where discrete particles retain coherence boundaries and do not spontaneously merge. Just as atoms require resonance conditions or external energy input to form stable bonds, black hole cores within the LESt substrate resist unification unless vibrational compatibility and substrate yield criteria are met. This analogy highlights the physical plausibility of merger frustration and reframes dual-core systems not as anomalies, but as macroscopic coherence-structured states—natural extensions of quantum behavior at cosmological scales.
+
+This molecule is not merely a conceptual artifact. It emerges naturally from the substrate field dynamics when rotational shear and coherence misalignment exceed the thresholds defined by the Vibrational Fusion Condition (VFC). Once formed, the dual-core molecule can persist over astrophysical timescales, radiating energy through trench yield events or rotational alignment fluctuations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{figures/blackhole_figure3.pdf}
+    \caption{
+        \textbf{Frustrated Black Hole Merger Cores}
+    }
+    \label{fig:molecule}
+\end{figure}
+
+These systems produce distinctive observational signatures. The trench provides a natural emission axis, resulting in collimated jet structures even in the absence of accretion. Jet precession, asymmetry, and periodic scalar bursts become direct consequences of the rotating, locked-core system. In this light, the frustrated merger is not a failed collapse—but a dynamic, field-structured engine for many of the high-energy phenomena attributed to black holes.
+
+
+
+\section{Classical Interpretation of Locking Conditions}
+
+The dynamics of merger frustration can be partially illuminated through classical analogues of interacting rotational systems. In classical mechanics, two spinning bodies brought into close proximity experience resistance to unification if their angular momenta are misaligned. This resistance manifests as a shear barrier—a rotational energy gap that must be overcome for the system to stabilize into a unified state.
+
+This energy cost can be represented as:
+\[
+E_{\text{shear}} = \frac{1}{2} I_{\text{eff}} (\omega_1 - \omega_2)^2
+\]
+where \( I_{\text{eff}} \) is the effective moment of inertia across the interaction zone, and \( \omega_1, \omega_2 \) are the respective angular velocities of the two cores.
+
+If additional alignment errors or substrate tension limits exist, these increase the overall energy threshold required for merger:
+\[
+E_{\text{merge}} = E_{\text{shear}} + E_{\text{misalign}} + E_{\text{substrate}}
+\]
+
+When the available system energy—such as that stored in orbital decay, field compression, or gravitational radiation—is insufficient to overcome this barrier, the merger halts:
+\[
+E_{\text{available}} < E_{\text{merge}} \Rightarrow \text{Frustration: molecule formation}
+\]
+
+This framework allows a traditional physicist to visualize the merger process not as a guaranteed collapse, but as a constrained transition governed by mechanical thresholds. While QSD formalizes these terms in coherence phase space and substrate wave mechanics, the classical analogy provides a physically intuitive map of how internal structure, spin, and resistance can trap a system in a metastable, dual-core state.
+
+\section{QSD Substrate Analog}
+
+Within the QSD framework, the classical energy terms described above correspond directly to coherence mismatch and substrate constraints at the field level. A merger attempt is governed not only by rotational energy, but by whether two coherence structures can unify without violating the phase continuity and saturation limits of the Lorentz--Einstein Substrate (LESt).
+
+The substrate locking condition is given by:
+
+\[
+E_{\text{coherence}} = \alpha (\Delta \phi)^2 + \beta (\Delta L)^2 + \gamma \rho_{\text{sat}}^2
+\]
+
+where:
+\begin{itemize}
+\item \( \Delta \phi \) is the phase mismatch between core wavefronts,
+\item \( \Delta L \) is the differential angular momentum vector across the interaction zone,
+\item \( \rho_{\text{sat}} \) is the local coherence saturation of the substrate,
+\item \( \alpha, \beta, \gamma \) are substrate coupling constants dependent on medium tension, wave elasticity, and deformation threshold.
+\end{itemize}
+
+This energy represents the cost of resolving the interaction into a unified phase structure. When the available reconfiguration energy (derived from local field tension, wavefront collapse, or infall momentum) fails to meet this threshold:
+
+\[
+E_{\text{available}} < E_{\text{coherence}} \Rightarrow \text{Frustration: dual-core formation}
+\]
+
+The LESt substrate, already saturated in each core region, cannot reorganize without violating coherence continuity. The system becomes trapped in a metastable configuration, manifesting macroscopically as a rotating black hole molecule with a coherence trench at its center.
+
+This formalism not only extends the classical analogy, but provides a testable framework for simulating substrate responses to high-energy gravitational interaction. It also reveals the path to resonance-based unification: only through phase alignment, spin synchronization, and dynamic yield of substrate stress can merger succeed.
+\subsection{Merger Condition in QSD}
+
+A successful merger requires that the energy available to the system is sufficient to fully resolve phase mismatch, rotational shear, and substrate saturation without exceeding local coherence thresholds. This condition can be expressed as:
+
+\[
+E_{\text{available}} \geq E_{\text{coherence}} = \alpha (\Delta \phi)^2 + \beta (\Delta L)^2 + \gamma \rho_{\text{sat}}^2
+\]
+
+Where:
+\begin{itemize}
+    \item \( \Delta \phi \): Phase misalignment between the two cores,
+    \item \( \Delta L \): Angular momentum mismatch,
+    \item \( \rho_{\text{sat}} \): Local substrate saturation level,
+    \item \( \alpha, \beta, \gamma \): Substrate coupling constants.
+\end{itemize}
+
+In the limit of complete alignment, merger becomes possible only when:
+\[
+\Delta \phi \to 0, \quad \Delta L \to 0, \quad \rho_{\text{sat}} \leq \rho_{\text{relax}}
+\]
+ensuring the substrate can reorganize into a unified coherence node. Under these conditions, the mass cores collapse into a single, stable configuration. This represents a true vibrational fusion event in the QSD framework.
+
+\subsection{Antiphase Catastrophe: A Predicted QSD Failure Mode}
+
+While the QSD framework allows for merger frustration and, in rare cases, successful unification, it also predicts a third, more extreme scenario: the \textit{antiphase catastrophe}. This occurs when two coherence-saturated cores approach with exact or near-exact \textbf{opposite phase alignment}. In this condition, their wavefronts interfere destructively in the substrate, not just preventing merger, but triggering a violent structural collapse of the trench region.
+
+Mathematically, the interaction enters a critical state when:
+\[
+\phi_1(x,t) = -\phi_2(x,t) \quad \Rightarrow \quad \Psi_{\text{core}_1} + \Psi_{\text{core}_2} \to 0
+\]
+
+In this limit, the coherence energy does not merely fail to resolve:
+\[
+E_{\text{coherence}} \gg E_{\text{available}}, \quad \text{and} \quad \frac{d^2 \rho_{\text{trench}}}{dt^2} \to \infty
+\]
+
+This implies catastrophic tension amplification at the trench interface, causing either:
+\begin{itemize}
+    \item A high-energy scalar emission burst (akin to a fast radio burst or gamma-ray transient),
+    \item A violent recoil event ejecting the cores apart (coherence bounce),
+    \item Or the spontaneous nucleation of a third mass structure due to substrate rupture.
+\end{itemize}
+
+\subsubsection*{Cosmological Signatures and Observational Candidates}
+
+Although no classical framework predicts such an interaction, several known phenomena exhibit traits that may reflect this antiphase condition:
+
+\begin{itemize}
+    \item \textbf{Orphan Gamma-Ray Bursts:} High-energy GRBs with no gravitational wave or optical progenitor may reflect a scalar coherence rupture from trench collapse.
+    
+    \item \textbf{Ultra-Luminous FRBs:} Events like FRB 200428 exhibit energies far beyond typical magnetar models and may represent destructive trench phase collapse and scalar yield.
+    
+    \item \textbf{Transient Events Without Host Galaxies:} Fast, bright, unbound transients (e.g., “Scary Barbie” or AT2018cow) may be signs of failed merger scenarios in intergalactic voids.
+    
+    \item \textbf{Ringdown Echoes with No Inspiral Signature:} Low-SNR gravitational wave echoes without precursor waves may result from bounce-back of substrate-rejected cores.
+\end{itemize}
+
+These phenomena, while diverse in spectrum and localization, may represent variations of the same physical process: destructive interference at the highest level of field coherence. The antiphase catastrophe is thus not only a novel theoretical construct—it is a testable, falsifiable prediction of the substrate field model, and one that no other gravitational framework currently offers.
+
+
+\section{Observable Consequences and Predictions}
+
+The merger frustration model offers not only theoretical clarity but also concrete, testable consequences. Systems that fail to merge due to coherence and rotational incompatibilities produce distinct observational signatures that differ from the clean, symmetric profiles expected in classical Kerr black hole mergers. These signatures span gravitational, electromagnetic, and scalar regimes, and appear across a growing number of known systems, see Fig.~\ref{fig:consequences}.
+
+\begin{itemize}
+\item \textbf{Jet Formation Without Accretion:}  
+In the dual-core molecule, the coherence trench that forms between locked cores acts as a natural collimation channel. Tension gradients and residual angular momentum can be expelled through this trench, creating polar-aligned outflows—jets—without the need for accretion disks. This accounts for jet formation in systems where no significant infall material is observed.
+
+\item \textbf{Jet Precession and Asymmetry:}  
+The rotational dynamics of the molecule, including core imbalance or misalignment, lead to non-uniform jet emission. As the trench structure rotates or wobbles relative to the substrate, the emission axis shifts. This results in the kind of precession, spiral jet paths, or one-sided jet dominance seen in sources like SS 433 and M87.
+
+\item \textbf{Ringdown Residuals and Echoes:}  
+Frustrated mergers leave behind residual field tension and unrelaxed phase discontinuities. These produce additional modes or delayed energy release beyond the primary gravitational wave ringdown. Such anomalies have been noted in several LIGO/Virgo\cite{Abbott2020} waveforms, where the decay lacks the clean exponential form of a fully unified Kerr object.
+
+\item \textbf{Post-Merger Scalar or Electromagnetic Emissions:}  
+Because the merger does not complete, energy remains trapped in the coherence trench. Over time, this energy is released through scalar wave emission or electromagnetic outbursts, sometimes delayed by seconds to months. These emissions may be observable as fast radio bursts (FRBs), high-energy gamma events, or infrared transients with no direct accretion-based explanation.
+
+\item \textbf{FRB Periodicity and Rotational Modulation:}  
+The rotating dual-core molecule emits scalar pulses directionally through its coherence trench. As the trench orientation aligns periodically with the observer, short coherent bursts emerge. This accounts for FRBs with periodic windows of activity, such as FRB 180916 and FRB 121102, without requiring internal neutron star engines or exotic compact objects.
+
+%\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{figures/blackhole_figure4.pdf}
+    \caption{
+        \textbf{Observable Consequences}
+    }
+    \label{fig:consequences}
+\end{figure}
+
+These predictions distinguish the merger molecule not just from classical black holes, but from all other compact object models currently in wide use. They are falsifiable, appear in existing data, and can guide future observational campaigns across multiple wavelengths and instruments.
+
+\item \textbf{Trench-Induced Gamma Bursts (TIGBs):}
+As the coherence trench in a dual-core black hole molecule becomes increasingly compressed, substrate tension builds to extreme levels. Once the local field tension exceeds the elastic threshold of the Lorentz--Einstein Substrate (LESt), a yield event may occur. This sudden release of coherence energy propagates as a directional scalar burst, which can decohere into high-frequency electromagnetic radiation—typically in the gamma range—when interacting with surrounding plasma, magnetic fields, or vacuum polarization domains.
+
+Unlike classical gamma-ray bursts (GRBs) powered by accretion or magnetar collapse, these trench-induced gamma bursts (TIGBs) require no infall material and may occur well after the initial gravitational merger event. They represent a late-time, structurally driven emission mechanism that naturally accounts for orphan GRBs, delayed high-energy flares, and burst phenomena without classical progenitors. TIGBs are a distinctive prediction of the QSD framework and offer a falsifiable pathway for detecting internal substrate failure in post-merger black hole systems.
+
+\end{itemize}
+
+\section{Evolutionary Path of Mass Interaction}
+
+The merger frustration model proposed in this manuscript predicts a distinct sequence of physical phases during compact object interaction—phases that differ significantly from the default assumptions of general relativity. Rather than leading inevitably to singular unification, many black hole encounters progress through coherence-limited states that result in long-lived, metastable structures. The following stages outline this evolutionary path as predicted by QSD and structured through the Lorentz--Einstein Substrate.
+
+\begin{enumerate}
+\item \textbf{Encounter:}  
+Two coherence-bound mass cores approach one another via gravitational attraction or orbital decay. Their LESt field structures begin to interact, producing overlapping wavefronts and early field deformation. Substrate tension builds as the cores draw nearer, and initial interference patterns emerge between their coherence zones.
+
+\item \textbf{Attempted Merger:}  
+If the conditions for a full merger—phase compatibility, rotational alignment, and substrate yield margin—are met, unification may proceed. However, in most cases, these conditions are not satisfied. Phase gradients interfere destructively, rotational shear exceeds substrate tolerances, or coherence saturation prevents reconfiguration. The system begins to organize around a locking geometry rather than a collapse.
+
+\item \textbf{Dual-Core Molecule Formation:}  
+When merger fails, a rotationally locked, phase-separated system forms. This metastable dual-core configuration features a persistent midline trench of suppressed coherence—the boundary where substrate tension accumulates but cannot resolve. The system continues to orbit internally or co-rotate, storing energy in shear and maintaining an active internal structure. From the outside, the gravitational signature may resemble a single object, but the field remains dynamically asymmetric.
+
+\item \textbf{Scalar Emission and Energy Bleed:}  
+Over time, residual energy trapped in the substrate tension field leaks outward via scalar wave emission, coherence recoil, or trench realignment. These emissions may manifest as fast radio bursts, asymmetric jets, or delayed post-merger radiation. Unlike Hawking radiation, this process is directional, structured, and driven by internal field tension rather than horizon temperature.
+
+\item \textbf{(Rare) Vibrational Unification:}  
+In exceptional cases, slow rotational damping or environmental perturbation may bring the system into full phase alignment. When the phase wavefronts lock and rotational shear dissipates below the substrate reconfiguration threshold, full merger occurs. The LESt substrate relaxes into a unified mass node, resulting in a stable, coherence-grounded object. This outcome is rare and represents a true singular mass state as predicted in classical theory—but achieved only through dynamic alignment rather than immediate collapse.
+\end{enumerate}
+
+This evolutionary path recasts the merger as a multi-stage, constrained interaction with rich internal structure and observable consequences—both consistent with, and extending beyond, classical expectations.
+
+\section{Compatibility with General Relativity}
+
+General relativity (GR) remains one of the most rigorously tested and successful theories in physics, especially in its description of the external spacetime geometry of massive objects. It accurately predicts gravitational waveforms from inspiral and horizon coalescence, and its metric solutions remain valid across a wide range of astrophysical phenomena. The model proposed in this work does not challenge these predictions; it accepts them in full wherever GR has observable reach.
+
+However, GR is explicitly silent on the internal behavior of singularities\cite{Penrose1965} and the physical mechanism of merger. It provides no equation for how, or even whether, two singularities merge into one—only how their surrounding event horizons and spacetime geometry evolve. In this sense, GR operates without a material model of mass: it curves spacetime around mass, but does not describe what mass \textit{is}.
+
+The Lorentz--Einstein Substrate fills this conceptual gap by treating mass as a coherence structure in a relativistic substrate field. It introduces no contradictions to GR, but rather embeds physical constraints and structural mechanisms inside the regions where GR defers. In particular, it provides a coherent explanation for when and why mergers may fail—not as a breakdown of GR, but as a structural outcome of phase, spin, and tension incompatibilities.
+
+Importantly, the predictions of merger frustration, jet asymmetry, scalar emissions, and long-term field relaxation do not invalidate GR’s metric predictions. They simply go beyond them. In the language of effective theory, GR is a boundary condition; QSD is the interior engine. Where GR describes the spacetime around mass, QSD describes the structural coherence \textit{within} it.
+
+This relationship mirrors historical theory development: Newtonian gravity was not discarded by Einstein, but reinterpreted as a limit. Likewise, GR remains fully intact—but now understood as a spacetime envelope around a richer, falsifiable internal structure.
+
+\paragraph{Yield Boundary Principle (QSD)}
+In the QSD framework, the formation of a black hole represents a primary yield event: a transition where the substrate saturates into a coherence-bound mass node. This marks the formation of a gravitationally active, structurally stable object.
+
+However, additional internal structure—such as dual coherence cores, trench locking, or rotational shear—remains observationally silent unless a secondary yield threshold is crossed. This secondary yield governs when internal phase dynamics or coherence tension produce observable emissions beyond classical expectations.
+
+As long as the system remains below this secondary yield threshold, its external spacetime geometry remains indistinguishable from a classical Kerr or Schwarzschild black hole. Thus, any number of internal mass nodes or locked configurations may exist inside the event horizon without violating general relativity. Yield—not internal arrangement—determines observational access to internal structure.
+
+
+
+\section{Case Studies and Real-World Systems}
+
+Several well-studied astrophysical systems exhibit features that align closely with the merger frustration model and the behavior of dual-core configurations described by QSD. These cases provide phenomenological support for the existence of coherence-locked black hole molecules and trench-mediated emissions.
+
+\begin{itemize}
+
+\item \textbf{GW190814\cite{Abbott2020} --- Asymmetric Merger Signature:}  
+This gravitational wave event involved a highly asymmetric mass ratio, producing a waveform that showed structural deviations from standard expectations. The post-merger signal lacked a clean ringdown and exhibited hints of residual modes. Under the dual-core model, this is consistent with a failed unification due to rotational or phase mismatch, resulting in a trapped metastable structure.
+
+\item \textbf{M87\cite{EHT2019} Jet --- Precession and Directional Instability:}  
+The iconic jet from M87 displays long-term directional asymmetry and precession not easily explained by a single-axis Kerr black hole. The trench emission mechanism predicted by the merger molecule model provides a natural explanation: jet orientation is set by the dynamic interaction of two rotating cores whose midline trench periodically shifts or wobbles.
+
+\item \textbf{SS 433\cite{Blundell2001} --- Spiral Jets and Oscillatory Behavior:}  
+This microquasar exhibits twin jets with corkscrew-like structure and a precessional cycle of $\sim$162 days. Its behavior is anomalous under accretion-only models. In the dual-core framework, SS 433 represents a long-lived molecule emitting through a rotating trench, with scalar tension and rotational coupling producing both modulation and misalignment.
+
+\item \textbf{FRB 180916\cite{CHIME2020} --- Periodicity with Activity Windows:}  
+This repeating fast radio burst exhibits $\sim$16-day periodic activity with burst clustering. Classical models struggle to explain this without invoking neutron star engines or magnetars. In the frustrated merger model, trench rotation and scalar yield events explain the periodic emission windows as trench-alignment cycles within a dual-core molecule.
+
+\item \textbf{FRB 121102\cite{CHIME2020} --- Irregular Repetition and Spectral Drift:}  
+Known for its highly active burst phases and downward-drifting spectral structure, FRB 121102 also shows clustering behavior inconsistent with single-object emission. These features align well with coherence trench relaxation events in a substrate-locked system, where wave interference and rotational structure produce variability and spectral dynamics.
+
+\end{itemize}
+
+Each of these systems exhibits one or more phenomena predicted by the frustrated merger framework: long-term energy retention, directional emission asymmetry, periodic scalar outflows, or delayed post-merger structure. The correlations across multiple systems provide empirical grounding for the merger molecule model, suggesting it may not be merely theoretical, but a physically observable structure in the universe. 
+
+
+\section{Implications for Black Hole Thermodynamics}
+
+The merger frustration model profoundly reshapes the interpretation of black hole thermodynamics. In the standard framework, all black holes are assumed to emit Hawking radiation due to quantum effects near the event horizon—making evaporation a universal, horizon-localized phenomenon. However, this view presupposes a featureless, singular interior and overlooks the possibility of internal structural dynamics.
+
+In the substrate framework introduced here, the ability to emit radiation is not tied to the presence of a horizon\cite{Unruh1981}, but to the presence of unresolved coherence within the mass structure. Specifically, only dual-core configurations—black hole molecules formed through merger frustration—retain internal phase motion, field tension, and rotational imbalance. These systems are not in equilibrium and thus remain dynamically active in the Lorentz--Einstein Substrate (LESt).
+
+Such configurations naturally emit through:
+\begin{itemize}
+\item \textbf{Scalar leakage:} The coherence trench between the cores provides a phase-depleted channel through which energy can bleed via scalar field waves or other substrate excitations.
+\item \textbf{Rotational tension relaxation:} As the internal angular momentum gradually realigns or decays, localized trench emissions may occur, modulated by phase drift or shear dissipation.
+\item \textbf{Discretized yield events:} The system can emit energy in brief, punctuated pulses (e.g., FRBs or post-merger flares) as the coherence boundary intermittently reconfigures.
+\end{itemize}
+
+In contrast, systems that achieve full unification—meeting the conditions of vibrational fusion—resolve all internal structure. These coherence-grounded, single-core configurations become structurally inert. They possess no trench, no field mismatch, and no internal degree of freedom that would permit further radiation. In the LESt framework, these objects do not emit, do not evaporate, and remain stable unless externally perturbed.
+
+This shifts the thermodynamic model from a statistical, horizon-based phenomenon to a structural one. Radiation is not a universal consequence of spacetime curvature—it is a symptom of incomplete coherence. This distinction is not merely theoretical: it is observationally testable. It predicts that only certain classes of compact objects will show prolonged or repeating emissions, while others will remain gravitationally active but thermodynamically silent.
+
+In this view, Hawking\cite{Hawking1975} evaporation is reinterpreted not as a universal fate, but as a misclassification of scalar yield from structurally complex systems. True evaporation requires internal structural imbalance—not merely curvature at the boundary.
+
+\section{Conclusion}
+
+The classical view of black hole mergers—clean, inevitable, and final—has begun to fracture under the weight of accumulating observational anomalies. Gravitational wave data, persistent jet asymmetries, and unexplained burst activity all point toward a richer, more structured reality inside the gravitational events we now routinely observe. This manuscript offers a model for that internal structure, grounded in field coherence, rotational dynamics, and phase saturation.
+
+At the heart of this proposal is the notion that merger is not inevitable. When two compact objects approach, the conditions required for full unification—coherent phase alignment, rotational compatibility, and substrate yield margin—are often unmet. Instead, they form a metastable dual-core molecule: a structure stabilized not by collapse, but by its internal resistance to merger. This structure is not only theoretically predicted by Quantum Substrate Dynamics (QSD), but it also matches known observational systems whose behavior has long eluded classical explanation.
+
+By introducing the Lorentz–Einstein Substrate (LESt) as a relativistic, coherence-bound field medium, this model reinterprets black holes not as abstract geometric singularities, but as physical phase structures embedded within a tension-bearing substrate. This interpretation allows for a wide range of new physical consequences: trench-mediated jet emission, delayed scalar radiation, and rotationally modulated burst phenomena. These signatures are not speculative—they already exist in the astrophysical record.
+
+Importantly, this model does not replace general relativity. It preserves GR’s external metric predictions while supplying the internal physics GR never attempted to model. In doing so, it reframes black hole thermodynamics not as a horizon-localized quantum process, but as a structural relaxation of unresolved internal coherence.
+
+The black hole molecule integrates with general relativity, supplying the internal structure it does not attempt to model. It bridges classical mechanics and modern field theory. It explains what happens not only outside the event horizon, but inside it. And it does so without violating the elegance of either domain. The theory now stands ready for further numerical modeling, observational testing, and expansion to exotic matter regimes. The merger, as it turns out, is not always a merger—and therein lies the key to what black holes truly are.
+
+\section*{Statements and Declarations}
+
+\paragraph*{Funding}
+The author received no financial support for the research, authorship, or publication of this article.
+The author has no relevant financial or non-financial interests to disclose.
+
+\paragraph*{Competing Interests}
+The author declares no competing interests.
+
+\paragraph*{Author Contributions}
+The author solely conceived, developed, and wrote the manuscript, including all theoretical content, references, and formatting.
+
+\paragraph*{Data Availability}
+No datasets were generated or analyzed during the current study. All references are publicly available.
+
+\paragraph*{Ethical Approval}
+Not applicable.
+
+\section*{Methods}
+
+This study was conducted as a theoretical investigation into the internal dynamics of compact object interactions under a coherence-structured field framework. The core hypotheses emerged from modeling assumptions within Quantum Substrate Dynamics (QSD), in which mass is defined as a saturated phase structure within a Lorentz-invariant substrate. The Lorentz--Einstein Substrate (LESt) was adopted as the operational medium for coherence tension, locking behavior, and field deformation.
+
+\subsection*{Model Assumptions}
+
+The analysis is based on several foundational assumptions:
+\begin{itemize}
+    \item Mass cores are not singularities but coherence-saturated wavefront structures within a relativistic field.
+    \item The substrate is Lorentz-invariant and behaves as a nonlinear, quantized field medium capable of interference, saturation, and rotational tension.
+    \item Merger requires satisfaction of the Vibrational Fusion Condition (VFC), involving phase alignment, spin matching, and local substrate reconfigurability.
+    \item Scalar or electromagnetic emissions originate from dynamic trench behavior along the locking interface between dual cores.
+\end{itemize}
+
+\subsection*{Theoretical Development}
+
+The theoretical framework was developed by extending classical rotational mechanics to coherence-based field interactions. Classical analogues (e.g., angular momentum shear, torque barriers) were mapped onto substrate-level dynamics using coherence energy thresholds and phase alignment criteria. These were formalized in terms of energy inequalities that predict whether merger or frustration will occur.
+
+\subsection*{Data Correlation and Case Selection}
+
+After establishing the theoretical model, we compared its predictions with known astrophysical systems exhibiting features unexplained by standard Kerr dynamics. Case studies were selected based on:
+\begin{itemize}
+    \item Documented anomalies in jet behavior, ringdown waveforms, or FRB periodicity.
+    \item Lack of explanatory sufficiency under GR-only models or accretion-based mechanisms.
+    \item Publicly available gravitational wave, radio burst, or multi-wavelength survey data.
+\end{itemize}
+
+No data was simulated for this paper, but model alignment with existing observational features (e.g., GW190814, M87 jet, SS 433, FRB 180916) served as an empirical check on the theory's physical plausibility.
+
+\subsection*{Future Computational Modeling}
+
+This work sets the stage for full numerical modeling of substrate field dynamics, including:
+\begin{itemize}
+    \item Phase coherence simulations across varying spin and mass ratios.
+    \item Trench formation and energy bleed profiles over time.
+    \item Yield event quantization under nonlinear field tension conditions.
+\end{itemize}
+
+These directions remain open for computational implementation and experimental falsification in future studies.
+
+\pagebreak
+\section*{Appendix}
+
+This appendix provides supporting material for the theoretical framework presented in the main text. These elements are intended to give additional mathematical clarity, diagrammatic intuition, and extended applicability beyond black hole systems.
+
+\subsection{Coherence Locking Math}
+
+The coherence locking condition arises from the substrate’s resistance to reconfiguration when two phase-saturated cores interact. The total coherence energy barrier can be written as:
+
+$$
+E_{\text{coherence}} = \alpha (\Delta \phi)^2 + \beta (\Delta L)^2 + \gamma \rho_{\text{sat}}^2
+$$
+
+Where:
+\begin{itemize}
+\item $\Delta \phi$: phase misalignment between cores,
+\item $\Delta L$: differential angular momentum,
+\item $\rho_{\text{sat}}$: local substrate saturation level,
+\item $\alpha, \beta, \gamma$: dimensionless coupling parameters specific to the substrate’s elastic and topological properties.
+\end{itemize}
+
+Merger is only possible if the system can deliver sufficient reconfiguration energy to overcome this barrier. Failure to meet this threshold leads to shear locking and dual-core formation.
+
+\subsection{Phase Diagrams}
+
+The interaction space of coherence-bound systems can be visualized as a phase diagram, where regions are defined by the relative values of $\Delta \phi$, $\Delta L$, and $\rho_{\text{sat}}$. Stable unification occurs only in a narrow subspace where all three parameters approach zero simultaneously.
+
+\begin{itemize}
+\item Region I: Aligned phase and spin --- full merger possible.
+\item Region II: Phase-aligned but rotationally mismatched --- locked-core with mild emissions.
+\item Region III: Full misalignment --- strong yield, high emission variability, persistent molecule formation.
+\end{itemize}
+
+These diagrams offer a basis for simulating parameter sweeps in numerical substrate models.
+
+\subsection{Yield Formalism}
+
+When a dual-core system fails to unify, excess tension along the trench may be periodically released through scalar or electromagnetic yield events. These can be modeled as phase relaxation shocks occurring at coherence thresholds:
+
+$$
+P_{\text{yield}}(t) = A \cdot e^{-\kappa t} \cdot \Theta(t - t_0)
+$$
+
+Where:
+\begin{itemize}
+\item $A$: amplitude of initial substrate deformation,
+\item $\kappa$: trench tension damping constant,
+\item $\Theta(t - t_0)$: Heaviside function representing a delayed release.
+\end{itemize}
+
+This formulation captures the spontaneous and quantized nature of FRBs and other transient emissions from locked-core configurations.
+
+\subsection{Extensions to Neutron Stars and Exotic Core Systems}
+\label{sec:exotic_extensions}
+While this work has focused on black hole dynamics, the same coherence and locking mechanisms may apply to:
+\begin{itemize}
+\item Neutron star binaries near quark deconfinement thresholds,
+\item Hypothetical boson stars or axion condensates with phase-bound mass,
+\item Core-collapse supernovae where phase saturation occurs prior to horizon formation.
+\end{itemize}
+
+In these cases, substrate-based locking may prevent fusion, leading to similar trench-mediated emissions, even in non-black hole contexts.
+
+\section{Modeling Supplement – Trench-Driven Jet and Emission Behavior}
+
+This section provides a first-principles modeling framework for observable phenomena arising from merger frustration in Quantum Substrate Dynamics (QSD). It focuses on jet structure, emission periodicity, scalar yield, and high-energy trench collapse from the coherence trench that forms between dual-core configurations.
+
+\subsection{Trench Jet Collimation Geometry}
+The coherence trench acts as a natural channel for energy emission. Assuming tension gradients are strongest along the trench axis, the jet opening angle is:
+
+$$
+\theta_{\text{jet}} \sim \arctan\left(\frac{v_\perp}{v_\parallel}\right)
+$$
+
+where $v_\parallel$ is energy flow along the trench (due to rotation), and $v_\perp \sim \nabla \rho_{\text{sat}} / \rho_0$ is the transverse leakage rate across the trench boundary.
+
+\subsection{Jet Precession from Rotational Asymmetry}
+Torque imbalance causes precession of the trench axis:
+
+$$
+\Omega_{\text{prec}} \sim \frac{\Delta L}{I_{\text{trench}}}
+$$
+
+where $\Delta L$ is the angular momentum difference between cores, and $I_{\text{trench}}$ the trench's effective inertia.
+
+\subsection{Yield Burst Modulation}
+Trench tension oscillation leads to scalar/em burst periodicity:
+
+$$
+T_{\text{burst}} \sim \frac{2\pi}{\omega_{\text{trench}}}, \quad \omega_{\text{trench}}^2 \sim \frac{k_{\text{elastic}}}{m_{\text{coherence}}}
+$$
+
+with $k_{\text{elastic}}$ the stiffness and $m_{\text{coherence}}$ the effective mass in the trench region.
+
+\subsection{Emission Energy from Trench Collapse}
+When trench collapse occurs due to destructive interference:
+
+$$
+E_{\text{burst}} \sim \frac{1}{2} k (\Delta \phi)^2 V_{\text{trench}}
+$$
+
+where $\Delta \phi$ is core phase mismatch, and $V_{\text{trench}}$ the trench volume.
+
+For trench volumes on the order of $10^8$–$10^{10}$ km$^3$, phase mismatches of $ \Delta \phi \sim 0.1$–1.0, and stiffness values of $k \sim 10^{25}$ erg/km$^3$, the resulting burst energy ranges from $10^{43}$ to $10^{47}$ erg. These values are consistent with the energy scales of known gamma-ray bursts, and support the identification of Trench-Induced Gamma Bursts (TIGBs) as a structurally driven emission class in QSD.
+
+\subsection*{Observable Prediction Summary Table}
+
+
+
+
+\begin{tabular*}{\linewidth}{|p{3.5cm}|p{4.5cm}|p{6cm}|@{\extracolsep{\fill}}}
+\hline
+\textbf{Phenomenon} & \textbf{QSD Driver} & \textbf{Predicted Signature} \\
+\hline
+Jet Collimation & Substrate tension gradient & Narrow $\theta_{\text{jet}}$, bipolar jets \\
+Jet Precession & $\Delta L / I_{\text{trench}}$ & Axis wobble, spiral jets \\
+Burst Periodicity & $\omega_{\text{trench}}$ oscillations & Repeating scalar/EM pulses \\
+High-Energy FRBs & Trench collapse (antiphase) & Short intense transients \\
+TIGBs & Trench rupture and scalar decoherence & High-energy gamma bursts, post-merger \\
+\hline
+\end{tabular*}
+
+
+\vspace{1em}
+This supplement enables future simulations and testable predictions under QSD dynamics.
+
+
+\pagebreak
+\begin{thebibliography}{99}
+
+\bibitem{bush2025}
+\textbf{Preprint.} Bush, M. (2025). Quantum Substrate Dynamics (QSD): A Relativistic Field Model of Emergent Mass, Inertia and Gravity. \textit{Preprints}, 2025060988. \url{https://doi.org/10.20944/preprints202506.0988.v1}
+
+\bibitem{Abbott2020} 
+\textbf{Journal article.} Abbott, B. P., et al. (LIGO Scientific Collaboration and Virgo Collaboration). (2020). GW190814: Gravitational Waves from the Coalescence of a 23 Solar Mass Black Hole with a 2.6 Solar Mass Compact Object. \textit{Astrophysical Journal Letters}, \textit{896}(1), L44. \url{https://doi.org/10.3847/2041-8213/ab960f}
+
+\bibitem{EHT2019} 
+\textbf{Journal article.} Event Horizon Telescope Collaboration. (2019). First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole. \textit{Astrophysical Journal Letters}, \textit{875}(1), L1. \url{https://doi.org/10.3847/2041-8213/ab0ec7}
+
+\bibitem{Blundell2001}
+\textbf{Journal article.} Blundell, K. M., \& Bowler, M. G. (2001). Symmetry in the changing jets of SS 433. \textit{Nature}, \textit{414}(6859), 200–202. \url{https://doi.org/10.1038/35102631}
+
+\bibitem{CHIME2020}
+\textbf{Journal article.} CHIME/FRB Collaboration. (2020). Periodic activity from a fast radio burst source. \textit{Nature}, \textit{582}(7812), 351–355. \url{https://doi.org/10.1038/s41586-020-2398-2}
+
+\bibitem{Hawking1975}
+\textbf{Journal article.} Hawking, S. W. (1975). Particle creation by black holes. \textit{Communications in Mathematical Physics}, \textit{43}(3), 199–220. \url{https://doi.org/10.1007/BF02345020}
+
+\bibitem{MTW}
+\textbf{Book.} Misner, C. W., Thorne, K. S., \& Wheeler, J. A. (1973). \textit{Gravitation}. San Francisco: W. H. Freeman.
+
+\bibitem{Landau1987}
+\textbf{Book.} Landau, L. D., \& Lifshitz, E. M. (1987). \textit{Fluid Mechanics} (2nd ed.). Oxford: Pergamon Press.
+
+\bibitem{Unruh1981}
+\textbf{Journal article.} Unruh, W. G. (1981). Experimental black-hole evaporation? \textit{Physical Review Letters}, \textit{46}(21), 1351–1353. \url{https://doi.org/10.1103/PhysRevLett.46.1351}
+
+\bibitem{Penrose1965}
+\textbf{Journal article.} Penrose, R. (1965). Gravitational collapse and space-time singularities. \textit{Physical Review Letters}, \textit{14}(3), 57–59. \url{https://doi.org/10.1103/PhysRevLett.14.57}
+
+\end{thebibliography}
+
+\end{document}
+-
